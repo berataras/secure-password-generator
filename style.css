@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    font-family: "Mulish", sans-serif;
+}
+
+body{
+    font-family: "Mulish", sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.app{
+    width: 500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    animation-name: loop;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.app h2 {
+    text-align: center;
+}
+
+.app .password{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0 20px 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 12px;
+}
+
+.app .password #result{
+    font-weight: 600;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.app .password button{
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    transition: 300ms all;
+}
+
+.app .password button:hover{
+    background-color: transparent;
+    transform: translateY(-5px);
+}
+
+.password button svg {
+    color: rebeccapurple;
+}
+
+.app .create-button{
+    cursor: pointer;
+    width: 100%;
+    background-color: rebeccapurple;
+    padding: 20px 0;
+    color: white;
+    border-radius: 12px;
+    transition: 200ms all;
+    user-select: none;
+    box-shadow: 0px 9px 0px 0px rgba(53,54,54,1);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.app .create-button:hover{
+    box-shadow: none;
+    transform: translateY(10px);
+}
+
+.alert{
+    position: absolute;
+    top: -100px;
+    background-color: rebeccapurple;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 30px;
+    transition: 300ms all;
+}
+
+.alert.alertAnimation{
+    top: 60px;
+}
+
+@keyframes alert {
+    50%{
+      transform: translateY(130px);
+    }
+}
+
+@keyframes loop {
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    75%{
+        transform: translateY(-5px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
